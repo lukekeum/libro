@@ -28,6 +28,7 @@ export default function Footer() {
         toast.error('지금 AI가 다른 질문을 답변하고있어요');
         return;
       }
+      setSearchValue('');
       // TODO: Add sending Question method
     },
     [isAnswerLoading]
@@ -49,12 +50,16 @@ export default function Footer() {
 }
 
 const Form = styled.form`
-  margin: 1.875rem 3rem;
+  display: flex;
   width: 100%;
+  background: white;
+  align-items: center;
+  margin: 1.875rem 3rem;
+  border-radius: 5px;
 `;
 
 const Wrapper = styled.div`
   display: flex;
   width: 100vw;
-  align-items: center;
+  flex-direction: row;
 `;

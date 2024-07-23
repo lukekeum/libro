@@ -1,3 +1,4 @@
+import { FaLightbulb } from 'react-icons/fa';
 import styled from 'styled-components';
 
 export const Logo = styled.h1`
@@ -12,7 +13,9 @@ export const Letter = styled.p`
   font-size: 1.25rem;
 `;
 
-export const Help = styled.div`
-  width: 25px;
-  height: 25px;
+export const Help = styled(FaLightbulb)`
+  width: 1.5625rem;
+  height: 1.5625rem;
+  color: white;
+  margin-right: 1rem;
 `;
