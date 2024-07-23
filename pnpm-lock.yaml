@@ -27,6 +27,9 @@ importers:
         specifier: ^6.1.12
         version: 6.1.12(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
     devDependencies:
+      '@swc/plugin-styled-components':
+        specifier: ^2.0.10
+        version: 2.0.10
       '@types/node':
         specifier: ^20.14.11
         version: 20.14.11
@@ -113,6 +116,9 @@ packages:
 
   '@swc/helpers@0.5.5':
     resolution: {integrity: sha512-KGYxvIOXcceOAbEk4bi/dVLEK9z8sZ0uBB3Il5b1rhfClSpcX0yfRO0KmTkqR2cnQDymwLB+25ZyMzICg/cm/A==}
+
+  '@swc/plugin-styled-components@2.0.10':
+    resolution: {integrity: sha512-R3topjrXcZWmiucP6E3iQZAKV7944SFTkujvBuyxD+Y/Xbp/1Qe8RkkZ0anPZ/IxPVVT8rX91ZfOgx/NiQnb8g==}
 
   '@types/node@20.14.11':
     resolution: {integrity: sha512-kprQpL8MMeszbz6ojB5/tU8PLN4kesnN8Gjzw349rDlNgsSzg90lAVj3llK99Dh7JON+t9AuscPPFW6mPbTnSA==}
@@ -354,6 +360,10 @@ snapshots:
     dependencies:
       '@swc/counter': 0.1.3
       tslib: 2.6.2
+
+  '@swc/plugin-styled-components@2.0.10':
+    dependencies:
+      '@swc/counter': 0.1.3
 
   '@types/node@20.14.11':
     dependencies:
