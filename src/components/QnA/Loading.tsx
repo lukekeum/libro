@@ -60,6 +60,7 @@ const dotElasticAfter = keyframes`
 
 const LoadingDots = styled.div`
   position: relative;
+  left: 15px;
   width: 10px;
   height: 10px;
   border-radius: 5px;
