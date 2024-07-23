@@ -16,7 +16,7 @@ export const Input = styled.input`
   }
 `;
 
-export const SendIcon = styled.div`
+export const SendIcon = styled.button`
   &:hover {
     cursor: pointer;
   }
