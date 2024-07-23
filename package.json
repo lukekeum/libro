@@ -15,5 +15,19 @@
   "bugs": {
     "url": "https://github.com/lukekeum/libro/issues"
   },
-  "homepage": "https://github.com/lukekeum/libro#readme"
+  "homepage": "https://github.com/lukekeum/libro#readme",
+  "dependencies": {
+    "axios": "^1.7.2",
+    "next": "14.2.5",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "recoil": "^0.7.7",
+    "styled-components": "^6.1.12"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.11",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "typescript": "^5.5.4"
+  }
 }
