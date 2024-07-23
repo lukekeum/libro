@@ -1,8 +1,12 @@
+'use client';
+
+import 'react-toastify/dist/ReactToastify.css';
 import Head from 'next/head';
 import Header from '@/components/Header';
 import Body from '@/components/Body';
 import Footer from '@/components/Footer';
-import StyledComponentsRegistry from '@/lib/registry';
+import { ToastContainer } from 'react-toastify';
+import { RecoilRoot } from 'recoil';
 
 export default function Home() {
   return (
@@ -13,9 +17,12 @@ export default function Home() {
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <link rel='icon' href='/favicon.ico' />
       </Head>
-      <Header />
-      <Body />
-      <Footer />
+      <RecoilRoot>
+        <Header />
+        <Body />
+        <Footer />
+        <ToastContainer />
+      </RecoilRoot>
     </>
   );
 }
