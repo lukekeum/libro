@@ -6,7 +6,7 @@ import {
   useCallback,
   useState,
 } from 'react';
-import Toast, { toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 import { useRecoilValue } from 'recoil';
 import styled from 'styled-components';
 
