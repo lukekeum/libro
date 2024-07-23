@@ -60,9 +60,9 @@ const dotElasticAfter = keyframes`
 
 const LoadingDots = styled.div`
   position: relative;
-  left: 15px;
-  width: 10px;
-  height: 10px;
+  left: 12px;
+  width: 8px;
+  height: 8px;
   border-radius: 5px;
   background-color: #fff;
   color: #9880ff;
@@ -75,18 +75,18 @@ const LoadingDots = styled.div`
     top: 0;
   }
   &::before {
-    left: -15px;
-    width: 10px;
-    height: 10px;
+    left: -12px;
+    width: 8px;
+    height: 8px;
     border-radius: 5px;
     background-color: #fff;
     color: #fff;
     animation: ${dotElasticBefore} 1s infinite linear;
   }
   &::after {
-    left: 15px;
-    width: 10px;
-    height: 10px;
+    left: 12px;
+    width: 8px;
+    height: 8px;
     border-radius: 5px;
     background-color: #fff;
     color: #fff;

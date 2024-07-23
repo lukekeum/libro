@@ -7,7 +7,9 @@ interface BorderLineProps {
 
 export default function BorderLine({ date }: BorderLineProps) {
   const processedDate = useMemo(() => {
-    return `${date.getFullYear()}.${date.getMonth()}.${date.getDate()} ${date.getHours()}:${date.getMinutes()}`;
+    return `${date.getFullYear()}.${
+      date.getMonth() + 1
+    }.${date.getDate()} ${date.getHours()}:${date.getMinutes()}`;
   }, [date]);
 
   return (
@@ -21,7 +23,7 @@ const DateShower = styled.span`
   color: white;
   font-size: 1rem;
   font-weight: bold;
-  margin: 0rem 0.625rem;
+  margin: 0rem 0.625rem 0 0;
   width: 100%;
   display: flex;
   flex-direction: row;

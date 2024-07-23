@@ -13,7 +13,7 @@ export default function QnA({ q, a, date }: QnAProps) {
     <Wrapper>
       <BorderLine date={date} />
       <Message type='user' msg={q} />
-      <Message type='bot' msg={a} />
+      <Message type='libro' msg={a} />
     </Wrapper>
   );
 }

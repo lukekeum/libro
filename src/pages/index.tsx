@@ -7,6 +7,7 @@ import Body from '@/components/Body';
 import Footer from '@/components/Footer';
 import { ToastContainer } from 'react-toastify';
 import { RecoilRoot } from 'recoil';
+import styled from 'styled-components';
 
 export default function Home() {
   return (
@@ -18,11 +19,19 @@ export default function Home() {
         <link rel='icon' href='/favicon.ico' />
       </Head>
       <RecoilRoot>
-        <Header />
-        <Body />
-        <Footer />
-        <ToastContainer />
+        <Provider>
+          <Header />
+          <Body />
+          <Footer />
+          <ToastContainer />
+        </Provider>
       </RecoilRoot>
     </>
   );
 }
+
+const Provider = styled.div`
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+`;
