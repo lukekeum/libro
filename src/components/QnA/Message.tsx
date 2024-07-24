@@ -23,7 +23,7 @@ export default function Message({ type, msg }: MessageProps) {
 function MessageShower({ type, msg }: MessageProps) {
   return type === 'libro' ? (
     msg ? (
-      msg === 'error' ? (
+      msg === 'Error' ? (
         <Error>Error</Error>
       ) : (
         <Msg>{msg}</Msg>
