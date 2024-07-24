@@ -24,9 +24,15 @@ export default function useQnARequest() {
     try {
       setIsLoading(true);
 
-      const res = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}`, {
-        text: qna.q,
-      });
+      const res = await axios.post(
+        `${process.env.NEXT_PUBLIC_API_URL}`,
+        {
+          text: qna.q,
+        },
+        {
+          headers: { Origin: 'https://libro.dgmanga.kr' },
+        }
+      );
 
       qna = { ...qna, a: res.data.response as string };
 
