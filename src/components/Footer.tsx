@@ -1,3 +1,4 @@
+'use client';
 import { isLoading } from '@/atom/isLoading';
 import useQnARequest from '@/hooks/useQnARequest';
 import { Input, SendIcon, UserIcon } from '@/styles/Footer';

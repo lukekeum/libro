@@ -1,3 +1,4 @@
+'use client';
 import styled from 'styled-components';
 import Loading from './Loading';
 import { FaBookOpen, FaUserAlt } from 'react-icons/fa';

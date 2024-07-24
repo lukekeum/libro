@@ -1,3 +1,4 @@
+'use client';
 import styled from 'styled-components';
 import QnA from './QnA';
 import useQnARequest from '@/hooks/useQnARequest';

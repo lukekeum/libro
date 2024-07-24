@@ -1,3 +1,4 @@
+'use client';
 import styled from 'styled-components';
 import BorderLine from './BorderLine';
 import Message from './Message';
