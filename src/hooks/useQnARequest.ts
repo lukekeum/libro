@@ -16,13 +16,13 @@ export default function useQnARequest() {
     };
     let previous: QnA[] = [];
 
+    setQnaList((prev) => {
+      previous = prev;
+      return [...prev, qna];
+    });
+
     try {
       setIsLoading(true);
-
-      setQnaList((prev) => {
-        previous = prev;
-        return [...prev, qna];
-      });
 
       const res = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}`, {
         text: qna.q,
@@ -33,6 +33,8 @@ export default function useQnARequest() {
       setQnaList([...previous, qna]);
     } catch (error) {
       console.error(error);
+      qna = { ...qna, a: 'Error' };
+      setQnaList([...previous, qna]);
       toast.error('요청을 처리하는 도중에 오류가 발생했어요');
     } finally {
       setIsLoading(false);

@@ -14,11 +14,31 @@ export default function Message({ type, msg }: MessageProps) {
       <Icon>{type === 'user' ? <FaUserAlt /> : <FaBookOpen />}</Icon>
       <MessageWrapper>
         <Sender>{type}</Sender>
-        {msg ? <Msg>{msg}</Msg> : <Loading />}
+        <MessageShower type={type} msg={msg} />
       </MessageWrapper>
     </Wrapper>
   );
 }
+
+function MessageShower({ type, msg }: MessageProps) {
+  return type === 'libro' ? (
+    msg ? (
+      msg === 'error' ? (
+        <Error>Error</Error>
+      ) : (
+        <Msg>{msg}</Msg>
+      )
+    ) : (
+      <Loading />
+    )
+  ) : (
+    <Msg>{msg}</Msg>
+  );
+}
+
+const Error = styled.div`
+  color: #ff4f4f;
+`;
 
 const Icon = styled.div`
   color: white;
