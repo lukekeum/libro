@@ -13,11 +13,12 @@ import styled from 'styled-components';
 
 export default function Footer() {
   const [searchValue, setSearchValue] = useState('');
-  const [, qnaRequest] = useQnARequest();
+  const qnaRequest = useQnARequest()[1];
   const isAnswerLoading = useRecoilValue(isLoading);
 
   const onChangeEvent: ChangeEventHandler<HTMLInputElement> = useCallback(
     (e) => {
+      e.preventDefault();
       setSearchValue(e.currentTarget.value);
     },
     []
@@ -33,7 +34,7 @@ export default function Footer() {
       qnaRequest(searchValue);
       setSearchValue('');
     },
-    [isAnswerLoading]
+    [isAnswerLoading, searchValue]
   );
 
   return (

@@ -13,7 +13,7 @@ export default function useQnARequest() {
       date: new Date(),
       q,
     };
-    let previous = [];
+    let previous: QnA[] = [];
 
     setIsLoading(true);
 
@@ -22,9 +22,14 @@ export default function useQnARequest() {
       return [...prev, qna];
     });
 
-    const res = await axios.post(`${process.env.API_URL}`, qna);
+    // TODO: Change Request
+    // const res = await axios.post(`${process.env.API_URL}`, qna);
 
-    qna = { ...qna, a: res.data.a as string };
+    // qna = { ...qna, a: res.data.a as string };
+
+    qna = { ...qna, a: '삼국지를 추천드릴게요!' };
+
+    setQnaList([...previous, qna]);
 
     setIsLoading(false);
   }, []);
