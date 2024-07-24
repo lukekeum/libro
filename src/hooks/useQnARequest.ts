@@ -28,8 +28,6 @@ export default function useQnARequest() {
 
     qna = { ...qna, a: res.data.response as string };
 
-    qna = { ...qna, a: '삼국지를 추천드릴게요!' };
-
     setQnaList([...previous, qna]);
 
     setIsLoading(false);
