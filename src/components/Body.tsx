@@ -1,14 +1,15 @@
 import styled from 'styled-components';
 import QnA from './QnA';
+import useQnARequest from '@/hooks/useQnARequest';
 
 export default function Body() {
+  const [qnaList] = useQnARequest();
+
   return (
     <Wrapper>
-      <QnA
-        q='소설책 하나를 추천해줘'
-        a='좋은 질문입니다. <삼국지>, <어쩌고> 추천드립니다.'
-        date={new Date()}
-      />
+      {qnaList.map((v, i) => (
+        <QnA key={i} {...v} />
+      ))}
     </Wrapper>
   );
 }

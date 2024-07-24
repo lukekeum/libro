@@ -1,4 +1,5 @@
 import { isLoading } from '@/atom/isLoading';
+import useQnARequest from '@/hooks/useQnARequest';
 import { Input, SendIcon, UserIcon } from '@/styles/Footer';
 import {
   ChangeEventHandler,
@@ -12,6 +13,7 @@ import styled from 'styled-components';
 
 export default function Footer() {
   const [searchValue, setSearchValue] = useState('');
+  const [, qnaRequest] = useQnARequest();
   const isAnswerLoading = useRecoilValue(isLoading);
 
   const onChangeEvent: ChangeEventHandler<HTMLInputElement> = useCallback(
@@ -28,8 +30,8 @@ export default function Footer() {
         toast.error('지금 AI가 다른 질문을 답변하고있어요');
         return;
       }
+      qnaRequest(searchValue);
       setSearchValue('');
-      // TODO: Add sending Question method
     },
     [isAnswerLoading]
   );
