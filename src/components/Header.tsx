@@ -22,4 +22,5 @@ const Div = styled.div`
 
 const Wrapper = styled.div`
   width: 100vw;
+  background-color: #272727;
 `;

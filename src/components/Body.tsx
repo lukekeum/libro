@@ -17,6 +17,7 @@ export default function Body() {
 const Wrapper = styled.div`
   display: flex;
   height: 100%;
+  overflow-y: scroll;
   margin: 0rem 3rem;
   margin-bottom: 1rem;
   flex-direction: column;
