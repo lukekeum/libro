@@ -22,10 +22,11 @@ export default function useQnARequest() {
       return [...prev, qna];
     });
 
-    // TODO: Change Request
-    // const res = await axios.post(`${process.env.API_URL}`, qna);
+    const res = await axios.post(`${process.env.API_URL}`, {
+      text: qna.q,
+    });
 
-    // qna = { ...qna, a: res.data.a as string };
+    qna = { ...qna, a: res.data.response as string };
 
     qna = { ...qna, a: '삼국지를 추천드릴게요!' };
 
