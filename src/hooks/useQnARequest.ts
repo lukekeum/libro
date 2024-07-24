@@ -22,7 +22,7 @@ export default function useQnARequest() {
       return [...prev, qna];
     });
 
-    const res = await axios.post(`${process.env.API_URL}`, {
+    const res = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}`, {
       text: qna.q,
     });
 
