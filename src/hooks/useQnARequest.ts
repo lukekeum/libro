@@ -2,6 +2,7 @@ import { isLoading } from '@/atom/isLoading';
 import { QnA, qnaAtom } from '@/atom/QnA';
 import axios from 'axios';
 import { useCallback } from 'react';
+import { toast } from 'react-toastify';
 import { useRecoilState, useSetRecoilState } from 'recoil';
 
 export default function useQnARequest() {
@@ -15,22 +16,27 @@ export default function useQnARequest() {
     };
     let previous: QnA[] = [];
 
-    setIsLoading(true);
+    try {
+      setIsLoading(true);
 
-    setQnaList((prev) => {
-      previous = prev;
-      return [...prev, qna];
-    });
+      setQnaList((prev) => {
+        previous = prev;
+        return [...prev, qna];
+      });
 
-    const res = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}`, {
-      text: qna.q,
-    });
+      const res = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}`, {
+        text: qna.q,
+      });
 
-    qna = { ...qna, a: res.data.response as string };
+      qna = { ...qna, a: res.data.response as string };
 
-    setQnaList([...previous, qna]);
-
-    setIsLoading(false);
+      setQnaList([...previous, qna]);
+    } catch (error) {
+      console.error(error);
+      toast.error('요청을 처리하는 도중에 오류가 발생했어요');
+    } finally {
+      setIsLoading(false);
+    }
   }, []);
 
   return [QnaList, qnaRequest] as const;
