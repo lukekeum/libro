@@ -69,4 +69,5 @@ const Wrapper = styled.div`
   display: flex;
   width: 100vw;
   flex-direction: row;
+  position: sticky;
 `;
