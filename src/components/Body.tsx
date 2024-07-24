@@ -20,7 +20,10 @@ const Wrapper = styled.div`
   height: 100%;
   overflow-y: scroll;
   margin: 0rem 3rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
   flex-direction: column;
   justify-content: flex-end;
+  @media only screen and (max-width: 600px) {
+    margin: 0rem 1rem;
+  }
 `;

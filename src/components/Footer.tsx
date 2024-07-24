@@ -60,6 +60,9 @@ const Form = styled.form`
   align-items: center;
   margin: 1.875rem 3rem;
   border-radius: 5px;
+  @media only screen and (max-width: 600px) {
+    margin: 1.5rem 1.5rem;
+  }
 `;
 
 const Wrapper = styled.div`

@@ -19,6 +19,9 @@ const Div = styled.div`
   justify-content: space-between;
   align-items: center;
   margin: 3rem 3.75rem;
+  @media only screen and (max-width: 600px) {
+    margin: 2rem 2.3rem;
+  }
 `;
 
 const Wrapper = styled.div`
