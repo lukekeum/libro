@@ -23,6 +23,7 @@ const Icon = styled.div`
   color: white;
   width: 1.25rem;
   height: 1.25rem;
+  margin-right: 0.5rem;
 `;
 
 const Msg = styled.div`
@@ -39,7 +40,7 @@ const Sender = styled.p`
   color: white;
   font-weight: bold;
   text-transform: capitalize;
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.35rem;
 `;
 
 const Wrapper = styled.div`
