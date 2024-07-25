@@ -49,6 +49,7 @@ const Icon = styled.div`
 
 const Msg = styled.div`
   color: white;
+  line-height: 1.3;
 `;
 
 const MessageWrapper = styled.div`
