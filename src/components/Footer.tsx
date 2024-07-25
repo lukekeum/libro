@@ -28,6 +28,7 @@ export default function Footer() {
   const sendQuestion: FormEventHandler = useCallback(
     (e) => {
       e.preventDefault();
+      if (!searchValue) return;
       if (isAnswerLoading) {
         toast.error('지금 AI가 다른 질문을 답변하고있어요');
         return;
@@ -47,11 +48,18 @@ export default function Footer() {
           onChange={onChangeEvent}
           value={searchValue}
         />
-        <SendIcon type='submit' />
+        <SendButton type='submit'>
+          <SendIcon />
+        </SendButton>
       </Form>
     </Wrapper>
   );
 }
+
+const SendButton = styled.button`
+  background: white;
+  border: none;
+`;
 
 const Form = styled.form`
   display: flex;
