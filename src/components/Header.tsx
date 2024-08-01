@@ -26,5 +26,6 @@ const Div = styled.div`
 
 const Wrapper = styled.div`
   width: 100vw;
+  position: sticky;
   background-color: #272727;
 `;
